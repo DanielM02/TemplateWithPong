@@ -45,6 +45,7 @@
       <li>badminton</li>
     </ul>
   </section>
+  
 </body>
 
 <canvas id="gamespace"width="640"height="440"style="background:teal"></canvas>
@@ -77,6 +78,14 @@ setInterval(function() {
     gameSpace.fillRect(BOUNDS_WIDTH/2, i, 4, 10)
 
   nearY += p;
+    if(nearY<0)
+      nearY=0;
+    if (farY<0)
+      farY=0;
+    if (nearY>340)
+      nearY=340
+    if (farY>340)
+      farY=340
   farY += q
 
   x += u;
